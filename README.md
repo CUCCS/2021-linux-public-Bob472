@@ -10,7 +10,7 @@
 
 - Ubuntu 20.04
 - virtualbox
-- asscinema
+- ascinema
 
 ## 实验过程
 
