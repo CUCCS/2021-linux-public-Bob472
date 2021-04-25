@@ -70,11 +70,13 @@ sudo apt-get install p7zip-full
 wget "https://c4pr1c3.gitee.io/linuxsysadmin/exp/chap0x04/worldcupplayerinfo.tsv"
 
 7z x web_log.tsv.7z
-  
 
-  
 
-  
+
+
+
+
+
 
 - 实验一结果
 
