@@ -40,17 +40,18 @@
   sudo apt-get install imagemagick
   ```
 
-  ![](img\install imagemagick.png)
+  ![](https://github.com/CUCCS/2021-linux-public-Bob472/blob/chap0x04/chap0x04/img/install%20imagemagick.png)
 
 - 运行已经编写好的脚本
 
 - 实验一结果
 
-  [实验一原图与处理后的图片]: 
+  
 
 - 实验二数据
 
-  
+  [实验二的结果](https://github.com/CUCCS/2021-linux-public-Bob472/blob/chap0x04/chap0x04/task2%20result.md)
 
 - 实验三数据
+  [实验三的结果](https://github.com/CUCCS/2021-linux-public-Bob472/blob/chap0x04/chap0x04/task3%20result.md)
 
