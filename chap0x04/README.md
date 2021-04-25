@@ -46,7 +46,7 @@
 
 - 实验一结果
 
-  
+  [实验一的结果](https://github.com/CUCCS/2021-linux-public-Bob472/blob/chap0x04/chap0x04/task1.md)
 
 - 实验二数据
 
