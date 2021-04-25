@@ -23,7 +23,7 @@
   - [x] 名字最长的球员是谁？名字最短的球员是谁？
   - [x] 年龄最大的球员是谁？年龄最小的球员是谁？
 
-任务三：用bash编写一个文本批处理脚本，对*web_log.tsv*进行批量处理完成相应的数据统计任务：[[查看实验结果]](统计数据-data2.md)
+任务三：用bash编写一个文本批处理脚本，对*web_log.tsv*进行批量处理完成相应的数据统计任务：
   - [x] 统计访问来源主机TOP 100和分别对应出现的总次数
   - [x] 统计访问来源主机TOP 100 IP和分别对应出现的总次数
   - [x] 统计最频繁被访问的URL TOP 100
@@ -40,17 +40,19 @@
   sudo apt-get install imagemagick
   ```
 
-  ![](img\install imagemagick.png)
+  ![](https://github.com/CUCCS/2021-linux-public-Bob472/blob/chap0x04/chap0x04/img/install%20imagemagick.png)
 
 - 运行已经编写好的脚本
 
 - 实验一结果
 
-  [实验一原图与处理后的图片]: 
+  
 
 - 实验二数据
 
-  
+  [实验二的结果](https://github.com/CUCCS/2021-linux-public-Bob472/blob/chap0x04/chap0x04/task2%20result.md)
 
 - 实验三数据
+- 
+  [实验三的结果](https://github.com/CUCCS/2021-linux-public-Bob472/blob/chap0x04/chap0x04/task3%20result.md)
 
