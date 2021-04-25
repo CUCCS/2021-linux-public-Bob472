@@ -10,21 +10,27 @@ help() {
 
 # 统计不同年龄区间范围（20岁以下、[20-30]、30岁以上）的球员数量、百分比
 countAge() {
-    awk -F '
-        BEGIN {a=0; b=0; c=0;}
+    #使用-F参数指定制表符为分隔符，按理来说awk默认以空格或者制表符为分隔符，但这次不指定制表符为分隔符就会出现奇怪的错误
+
+
+    awk -F "\t" '
+    
+    
+        BEGIN {small=0; middle=0; big=0;}
         NR>1 {
-            if($6>=0&&$6<20) {a++;}
-            else if($6<=30) {b++;}
-            else {c++;}
+            if($6<20) {small++;}
+            else if($6<=30) {middle++;}
+            else {big++;}
         }
         END {
             sum=a+b+c;
             printf("Age\tCount\tPercentage\n");
-            printf("<20\t%d\t%f%%\n",a,a*100.0/sum);
-            printf("[20,30]\t%d\t%f%%\n",b,b*100.0/sum);
-            printf(">30\t%d\t%f%%\n",c,c*100.0/sum);
+            printf("<20\t%d\t%f%%\n",small,small*100.0/sum);
+            printf("[20,30]\t%d\t%f%%\n",middle,middle*100.0/sum);
+            printf(">30\t%d\t%f%%\n",big,big*100.0/sum);
         }' worldcupplayerinfo.tsv
 }
+#NR表示当前行的行数，NR>1则表示从第二行开始执行
 
 # 统计不同场上位置的球员数量、百分比
 countPosition() {
@@ -44,7 +50,7 @@ countPosition() {
 
 # 名字最长的球员是谁？名字最短的球员是谁？
 # 考虑并列
-function maxName {
+maxandminName() {
     awk -F "\t" '
         BEGIN {mx=-1; mi=1000;}
         NR>1 {
@@ -66,7 +72,7 @@ function maxName {
 
 # 年龄最大的球员是谁？年龄最小的球员是谁？
 # 考虑并列
-function maxAge {
+maxandminAge() {
     awk -F "\t" '
         BEGIN {mx=-1; mi=1000;}
         NR>1 {
@@ -99,11 +105,11 @@ while [ "$1" != "" ];do
             exit 0
             ;;
         "-n")
-            maxName
+            maxandminName
             exit 0
             ;;
         "-a")
-            maxAge
+            maxandminAge
             exit 0
             ;;
         "-h")

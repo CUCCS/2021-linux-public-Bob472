@@ -8,13 +8,14 @@ help() {
     echo "-h                 帮助文档"
 }
 
-# 对jpeg格式图片进行图片质量压缩
+#对jpeg格式图片进行图片质量因子为Q的压缩
 # convert filename1 -quality 50 filename2
 compressQuality() {
     Q=$1 # 质量因子
     for filename in `ls`;do
         type=${filename##*.} # 删除最后一个.及左边全部字符
-        if [[ ${type} = "jpeg" || ${type} = "jpg" ]]
+        if [[ ${type} = "jpeg" || ${type} = "jpg" ]]#经过上网查证，jpg和jpeg是一样的
+        #||表示“或”，只要有一个成立就可以了，在这里，只要type是jpeg和jpg中的一个就可以执行下面的语句
         then 
         convert "${filename}" -quality "${Q}" "compress_${filename}"
         echo "$filename is compressed."
@@ -41,7 +42,7 @@ compressResolution() {
 # convert filename1 -pointsize 50 -fill black -gravity center -draw "text 10,10 'Works like magick' " filename2
 watermark() {
     for filename in `ls`;do
-        
+ #因为没说是哪种图片，就默认为所有图片，因此不设置过滤条件   
         convert "${filename}" -pointsize "$1" -fill black -gravity center -draw "text 10,10 '$2'" "watermark_${filename}"
         echo "${filename} is watermarked with $2."
         
@@ -52,7 +53,7 @@ watermark() {
 # mv filename1 filename2
 prefix() {
     for filename in `ls`;do
-        
+        #统一添加文件名前缀，是文件名，不是图像，所有不设置过滤条件
         mv "${filename}" "$1${filename}"
         echo "${filename} is renamed to $1${filename}"
         
@@ -61,7 +62,7 @@ prefix() {
 suffix() {
     for filename in `ls`;do
         type=${filename##*.}
-        
+         #统一添加文件名后缀，是文件名，不是图像，所有不设置过滤条件
         new_filename=${filename%.*}$1"."${type}
         mv "${filename}" "${new_filename}"
         echo "${filename} is renamed to ${new_filename}"

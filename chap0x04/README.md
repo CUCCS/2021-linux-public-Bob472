@@ -32,6 +32,8 @@
   - [x] 给定URL输出TOP 100访问来源主机
 ## 实验步骤
 
+### 实验一
+
 - 安装imagemagick
 
   ```
@@ -40,19 +42,48 @@
   sudo apt-get install imagemagick
   ```
 
+
+
   ![](https://github.com/CUCCS/2021-linux-public-Bob472/blob/chap0x04/chap0x04/img/install%20imagemagick.png)
 
-- 运行已经编写好的脚本
+
+ 运行已经编写好的脚本task1.sh
+
+  ### 实验二
+
+  
+
+  
+
+- wget "https://c4pr1c3.gitee.io/linuxsysadmin/exp/chap0x04/worldcupplayerinfo.tsv"
+
+- 运行已经编写好的脚本task2.sh
+
+
+  ### 实验三
+提前安装 p7zip-full
+
+sudo apt-get install p7zip-full
+
+将所需文件下载到本地并解压
+
+wget "https://c4pr1c3.gitee.io/linuxsysadmin/exp/chap0x04/worldcupplayerinfo.tsv"
+
+7z x web_log.tsv.7z
+  
+
+  
+
+  
 
 - 实验一结果
 
-  
+  [实验一的结果](https://github.com/CUCCS/2021-linux-public-Bob472/blob/chap0x04/chap0x04/task1.md)
 
 - 实验二数据
 
   [实验二的结果](https://github.com/CUCCS/2021-linux-public-Bob472/blob/chap0x04/chap0x04/task2%20result.md)
 
 - 实验三数据
-- 
-  [实验三的结果](https://github.com/CUCCS/2021-linux-public-Bob472/blob/chap0x04/chap0x04/task3%20result.md)
 
+- [实验三的结果](https://github.com/CUCCS/2021-linux-public-Bob472/blob/chap0x04/chap0x04/task3%20result.md)
