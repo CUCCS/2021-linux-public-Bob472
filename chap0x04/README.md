@@ -48,32 +48,37 @@
 
 
  运行已经编写好的脚本task1.sh
+ 
+ 
 
   ### 实验二
 
   
 
-  [实验一的结果](https://github.com/CUCCS/2021-linux-public-Bob472/blob/chap0x04/chap0x04/task1.md)
+  
 
 - wget "https://c4pr1c3.gitee.io/linuxsysadmin/exp/chap0x04/worldcupplayerinfo.tsv"
 
 - 运行已经编写好的脚本task2.sh
-
+运行截图
+![](https://github.com/CUCCS/2021-linux-public-Bob472/blob/chap0x04/chap0x04/img/%E8%BF%90%E8%A1%8Ctask1.png)
 
   ### 实验三
 提前安装 p7zip-full
 
-sudo apt-get install p7zip-full
+```sudo apt-get install p7zip-full```
 
 将所需文件下载到本地并解压
 
-wget "https://c4pr1c3.gitee.io/linuxsysadmin/exp/chap0x04/worldcupplayerinfo.tsv"
+```wget "https://c4pr1c3.gitee.io/linuxsysadmin/exp/chap0x04/worldcupplayerinfo.tsv"
 
-7z x web_log.tsv.7z
-
-
+7z x web_log.tsv.7z```
 
 
+
+运行task3.sh
+运行截图
+![](https://github.com/CUCCS/2021-linux-public-Bob472/blob/chap0x04/chap0x04/img/%E8%BF%90%E8%A1%8Ctask2.png)
 
 
 
