@@ -9,6 +9,7 @@ help() {
 }
 
 #对jpeg格式图片进行图片质量因子为Q的压缩
+
 # convert filename1 -quality 50 filename2
 compressQuality() {
     Q=$1 # 质量因子
