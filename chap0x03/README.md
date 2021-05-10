@@ -151,3 +151,17 @@ Restart = always
 //重载修改过的配置文件
 
 sudo systemctl daemon-reload`
+
+## 实验中遇到的问题
+```sudo mount -t vboxsf [Windows共享文件夹名称] /mnt/dirname```
+
+在进行这一步时出席挂载错误“mount: /mnt/xxx: wrong fs type, bad option, bad superblock on xxx...”，
+
+- 执行
+
+```sudo apt-get install virtualbox-guest-utils```即可
+## 参考资料
+
+[Systemd 入门教程：命令篇](https://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-commands.html)
+
+[Systemd 入门教程：实战篇](https://www.ruanyifeng.com/blog/2016/03/systemd-tutorial-part-two.html)
